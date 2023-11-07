@@ -3,10 +3,14 @@ module Ch3 where
 import Ch1
 import Ch2
 
-pair = (,)
+pair x y = cons x (cons y [])
 
-firstOfPair a b = equal (fst (pair a b)) a
+firstOf x = car x
 
-secondOfPair a b = equal (snd (pair a b)) a
+secondOf x = car (cdr x)
+
+firstOfPair a b = equal (firstOf (pair a b)) a
+
+secondOfPair a b = equal (secondOf (pair a b)) b
 
 inPair e x = if equal (fst x) e then True else equal (snd x) e
