@@ -1,5 +1,11 @@
 #lang racket
 
+(provide atom)
+(provide car/cons)
+(provide cdr/cons)
+(provide equal-same)
+(provide equal-swap)
+
 (define (atom x)
   (equal? x '()))
 
