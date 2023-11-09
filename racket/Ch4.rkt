@@ -1,6 +1,7 @@
 #lang racket
 
 (require "Ch1.rkt")
+(provide sub)
 
 (define (list0? v)
   (equal? v '()))
