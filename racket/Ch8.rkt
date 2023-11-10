@@ -2,6 +2,10 @@
 
 (require "Ch1.rkt")
 
+(provide set?)
+(provide atoms)
+(provide add-atoms)
+
 (define (member? x ys)
   (if (atom ys)
       #f
@@ -23,3 +27,6 @@
           (cons x ys))
       (add-atoms (car x)
                  (add-atoms (cdr x) ys))))
+
+(define (atoms x)
+  (add-atoms x '()))

@@ -18,12 +18,12 @@ isSet xs =
                 then False
                 else isSet (cdr xs)
 
-{-
 addAtoms x ys =
-    if atom x
+    if length x == 1
         then
-            if member x ys
+            if member (car x) ys
                 then ys
-                else cons x ys
-        else addAtoms (car x) (addAtoms (cdr x) ys)
--}
+                else cons (car x) ys
+        else addAtoms (cons (car x) []) (addAtoms (cdr x) ys)
+
+atoms x = [x]
