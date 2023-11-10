@@ -2,6 +2,7 @@
 
 (require "Ch1.rkt")
 (provide sub)
+(provide natp)
 
 (define (list0? v)
   (equal? v '()))
